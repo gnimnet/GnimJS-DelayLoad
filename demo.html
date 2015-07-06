@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Delay Load</title>
+        <style>
+            * {margin:0;padding:0;}
+            body{padding:10px;}
+            h1{font-size:22px;margin:15px 0 5px;}
+            h2{font-size:20px;margin:13px 0 5px;}
+            h3{font-size:18px;margin:11px 0 5px;}
+            h4{font-size:16px;margin:9px 0 5px;}
+            h5{font-size:14px;margin:7px 0 5px;}
+            h6{font-size:12px;margin:5px 0 5px;}
+            p,.line{display:block;padding:5px;}
+            p{line-height:150%;}
+            button{padding:3px;margin:5px;}
+            .demos{display:block;}
+            .demo{display:inline-block;vertical-align:top;width:300px;}
+            .demo img{display:block;margin:5px auto;width:150px;height:150px;}
+            .demo .img{display:block;margin:5px auto;width:150px;height:150px;background:#eee url("bgimg.png") center center no-repeat;}
+            .demo .img.delayload-ok{background-size:cover;}
+        </style>
+    </head>
+    <body>
+        <div class="demos">
+            <div class="demo">
+                <h3>图片类型</h3>
+                <img src="bgimg.png" imgsrc="ming.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="modnut.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="ming.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="modnut.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="ming.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="modnut.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="ming.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="modnut.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="ming.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="modnut.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="ming.jpg" class="delayload" alt="测试图片"/>
+                <img src="bgimg.png" imgsrc="modnut.jpg" class="delayload" alt="测试图片"/>
+            </div>
+            <div class="demo">
+                <h3>块类型</h3>
+                <div imgsrc="ming.jpg" class="img delayload"></div>
+                <div imgsrc="modnut.jpg" class="img delayload"></div>
+                <div imgsrc="ming.jpg" class="img delayload"></div>
+                <div imgsrc="modnut.jpg" class="img delayload"></div>
+                <div imgsrc="ming.jpg" class="img delayload"></div>
+                <div imgsrc="modnut.jpg" class="img delayload"></div>
+                <div imgsrc="ming.jpg" class="img delayload"></div>
+                <div imgsrc="modnut.jpg" class="img delayload"></div>
+                <div imgsrc="ming.jpg" class="img delayload"></div>
+                <div imgsrc="modnut.jpg" class="img delayload"></div>
+                <div imgsrc="ming.jpg" class="img delayload"></div>
+                <div imgsrc="modnut.jpg" class="img delayload"></div>
+            </div>
+        </div>
+        <script src="http://gnim.net/files/GnimJS/min/gnim-min.js"></script>
+        <script src="delayload.js"></script>
+        <script>
+            $.ready(function() {
+                new DelayLoad().init();
+            });
+        </script>
+    </body>
+</html>
